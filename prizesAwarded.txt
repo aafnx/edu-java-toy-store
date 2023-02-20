@@ -1,4 +1,12 @@
-id: 2 name: Мяч chance: 0,700000
-id: 1 name: Тест chance: 0,300000
-id: 2 name: Мяч chance: 0,700000
-id: 1 name: Тест chance: 0,300000
+id: 2 name: Мяч chance: 70,000000
+id: 2 name: Мяч chance: 70,000000
+id: 2 name: Мяч chance: 70,000000
+id: 2 name: Мяч chance: 70,000000
+id: 1 name: Кукла chance: 30,000000
+id: 1 name: Кукла chance: 30,000000
+id: 2 name: Мяч chance: 70,000000
+id: 1 name: Кукла chance: 30,000000
+id: 2 name: Мяч chance: 70,000000
+id: 2 name: Мяч chance: 70,000000
+id: 2 name: Мяч chance: 70,000000
+id: 2 name: Мяч chance: 70,000000

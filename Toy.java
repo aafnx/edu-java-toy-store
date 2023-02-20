@@ -1,9 +1,9 @@
 public class Toy {
     private int id;
     private String name;
-    private float chance;
+    private double chance;
 
-    public Toy(int id, String name, float chance) {
+    public Toy(int id, String name, double chance) {
         this.id = id;
         this.name = name;
         this.chance = chance;
@@ -13,7 +13,7 @@ public class Toy {
         this.id = id;
     }
 
-    public void setChance(float chance) {
+    public void setChance(double chance) {
         this.chance = chance;
     }
 
@@ -25,7 +25,7 @@ public class Toy {
         return id;
     }
 
-    public float getChance() {
+    public double getChance() {
         return chance;
     }
 
