@@ -9,3 +9,4 @@ id: 2 name: Мяч chance: 50,000000
 id: 1 name: Кукла chance: 30,000000
 id: 1 name: Кукла chance: 30,000000
 id: 3 name: Робот chance: 20,000000
+id: 1 name: Кукла chance: 30,000000

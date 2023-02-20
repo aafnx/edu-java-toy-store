@@ -1,0 +1,61 @@
+# 1
+aa@ubuntu-home:~/edu/linux$ mkdir 'Игрушки для школьников' 'Игрушки для дошколят'
+aa@ubuntu-home:~/edu/linux$ ls
+'Игрушки для дошколят'  'Игрушки для школьников'
+
+# 2
+aa@ubuntu-home:~/edu/linux$ cd Игрушки\ для\ школьников/
+aa@ubuntu-home:~/edu/linux/Игрушки для школьников$ touch Роботы.txt Конструктор.txt 'Настольные игры'.txt
+aa@ubuntu-home:~/edu/linux/Игрушки для школьников$ ls
+ Конструктор.txt  'Настольные игры.txt'   Роботы.txt
+
+# 3
+aa@ubuntu-home:~/edu/linux$ cd Игрушки\ для\ дошколят/
+aa@ubuntu-home:~/edu/linux/Игрушки для дошколят$ touch 'Мягкие игрушки.txt' 'Куклы.txt' 'Машинки.txt'
+aa@ubuntu-home:~/edu/linux/Игрушки для дошколят$ ls
+ Куклы.txt   Машинки.txt  'Мягкие игрушки.txt'
+aa@ubuntu-home:~/edu/linux/Игрушки для дошколят$
+
+# 4
+aa@ubuntu-home:~/edu/linux$ mkdir 'Имя игрушки'
+aa@ubuntu-home:~/edu/linux$ mv Игрушки\ для\ школьников/* Имя\ игрушки/
+aa@ubuntu-home:~/edu/linux$ mv Игрушки\ для\ дошколят/* Имя\ игрушки/
+aa@ubuntu-home:~/edu/linux$ ls Имя\ игрушки/
+ Конструктор.txt   Машинки.txt          'Настольные игры.txt'
+ Куклы.txt        'Мягкие игрушки.txt'   Роботы.txt
+
+# 5
+aa@ubuntu-home:~/edu/linux$ mv Имя\ игрушки/ Игрушки
+aa@ubuntu-home:~/edu/linux$ ls
+ Игрушки  'Игрушки для дошколят'  'Игрушки для школьников'
+
+# 6
+aa@ubuntu-home:~/edu/linux$ ls Игрушки
+ Конструктор.txt   Машинки.txt          'Настольные игры.txt'
+ Куклы.txt        'Мягкие игрушки.txt'   Роботы.txt
+
+# 7
+aa@ubuntu-home:~/edu/linux$ sudo snap install discord
+[sudo] пароль для aa:
+discord 0.0.25 от Snapcrafters установлен
+aa@ubuntu-home:~/edu/linux$ sudo snap list | grep discord
+discord                    0.0.25            150     latest/stable    snapcrafters  -
+aa@ubuntu-home:~/edu/linux$ sudo snap remove --purge discord
+discord удалено
+aa@ubuntu-home:~/edu/linux$ sudo snap list | grep discord
+aa@ubuntu-home:~/edu/linux$
+
+# 8
+aa@ubuntu-home:~/edu/linux$ mkdir backup-toys
+aa@ubuntu-home:~/edu/linux$ cd backup-toys/
+aa@ubuntu-home:~/edu/linux$ crontab -e
+no crontab for aa - using an empty one
+crontab: installing new crontab
+aa@ubuntu-home:~/edu/linux$ crontab -l
+*/3 * * * * cp -b /home/aa/edu/linux/Игрушки/*.txt /home/aa/edu/linux/backup-toys
+aa@ubuntu-home:~/edu/linux/backup-toys$ ls
+ Конструктор.txt   Машинки.txt          'Настольные игры.txt'
+ Куклы.txt        'Мягкие игрушки.txt'   Роботы.txt
+aa@ubuntu-home:~/edu/linux/backup-toys$ crontab -r
+aa@ubuntu-home:~/edu/linux/backup-toys$ crontab -l
+no crontab for aa

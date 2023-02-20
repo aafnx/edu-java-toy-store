@@ -9,16 +9,13 @@ public class Store {
     public Store() {
         this.store = new ArrayList<Toy>();
     }
-
     public ArrayList<Toy> getToys() {
         return store;
     }
-
     public void addToy(Toy toy) {
         this.store.add(toy);
     }
-
-    public void setToyWeight(int id, double chance) {
+    public void setToyChance(int id, double chance) {
         for (Toy toy : this.store) {
             if (toy.getId() == id) {
                 toy.setChance(chance);
@@ -26,18 +23,12 @@ public class Store {
             }
         }
     }
-
-//    public void loadStore() {
-//        this.addToy(new Toy(1, "Кукла", 30));
-//        this.addToy(new Toy(2, "Мяч", 70));
-//    }
-
     public Toy getRandomToy() {
-        double totalWeight = 0;
+        double totalChance = 0;
         for (Toy toy : this.store) {
-            totalWeight += toy.getChance();
+            totalChance += toy.getChance();
         }
-        double random = new Random().nextDouble() * totalWeight;
+        double random = new Random().nextDouble() * totalChance;
         for (Toy toy : this.store) {
             random -= toy.getChance();
             if (random <= 0) {
@@ -52,7 +43,7 @@ public class Store {
         if (prizeToy != null) {
             this.store.remove(prizeToy);
             try {
-                FileWriter writer = new FileWriter("prizesAwarded.txt", true);
+                FileWriter writer = new FileWriter("./src/prizesAwarded.txt", true);
                 writer.write(prizeToy + "\n");
                 writer.close();
             } catch (IOException e) {
